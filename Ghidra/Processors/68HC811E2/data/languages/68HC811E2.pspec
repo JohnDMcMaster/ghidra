@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<processor_spec>
+  <programcounter register="PC"/>
+  <default_symbols>
+    <!-- 3-1614: Table 2. Memory Map -->
+    <symbol name="PORTA" address="1000"/>
+    <symbol name="RES_1001" address="1001"/>
+    <symbol name="PIOC" address="1002"/>
+    <symbol name="PORTC" address="1003"/>
+    <symbol name="PORTB" address="1004"/>
+    <symbol name="PORTCL" address="1005"/>
+    <symbol name="RES_1006" address="1006"/>
+    <symbol name="DDRC" address="1007"/>
+    <symbol name="PORTD" address="1008"/>
+    <symbol name="DDRD" address="1009"/>
+    <symbol name="PORTE" address="100A"/>
+    <symbol name="CFORC" address="100B"/>
+    <symbol name="OC1M" address="100C"/>
+    <symbol name="OC1D" address="100D"/>
+    <symbol name="TCNTH" address="100E"/>
+    <symbol name="TCNTL" address="100F"/>
+    <symbol name="TIC1H" address="1010"/>
+    <symbol name="TIC1L" address="1011"/>
+    <symbol name="TIC2H" address="1012"/>
+    <symbol name="TIC2L" address="1013"/>
+    <symbol name="TIC3L" address="1014"/>
+    <symbol name="TIC3H" address="1015"/>
+    <symbol name="TOC1H" address="1016"/>
+    <symbol name="TOC1L" address="1017"/>
+    <symbol name="TOC2H" address="1018"/>
+    <symbol name="TOC2L" address="1019"/>
+    <symbol name="TOC3H" address="101A"/>
+    <symbol name="TOC3L" address="101B"/>
+    <symbol name="TOC4H" address="101C"/>
+    <symbol name="TOC4L" address="101D"/>
+    <symbol name="TOC5H" address="101E"/>
+    <symbol name="TOC5L" address="101F"/>
+    <symbol name="TCTL1" address="1020"/>
+    <symbol name="TCTL2" address="1021"/>
+    <symbol name="TMSK1" address="1022"/>
+    <symbol name="TFLG1" address="1023"/>
+    <symbol name="TMSK1" address="1024"/>
+    <symbol name="TFLG2" address="1025"/>
+    <symbol name="PACTL" address="1026"/>
+    <symbol name="PACNT" address="1027"/>
+    <symbol name="SPCR" address="1028"/>
+    <symbol name="SPSR" address="1029"/>
+    <symbol name="SPDR" address="102A"/>
+    <symbol name="BAUD" address="102B"/>
+    <symbol name="SCCR1" address="102C"/>
+    <symbol name="SCCR2" address="102D"/>
+    <symbol name="SCSR" address="102E"/>
+    <symbol name="SCDR" address="102F"/>
+    <symbol name="ADCTL" address="1030"/>
+    <symbol name="ADR1" address="1031"/>
+    <symbol name="ADR2" address="1032"/>
+    <symbol name="ADR3" address="1033"/>
+    <symbol name="ADR4" address="1034"/>
+    <symbol name="BPROT" address="1035"/>
+    <symbol name="RES_1036" address="1036"/>
+    <symbol name="RES_1037" address="1037"/>
+    <symbol name="RES_1038" address="1038"/>
+    <symbol name="OPTION" address="1039"/>
+    <symbol name="COPRST" address="103A"/>
+    <symbol name="PPROG" address="103B"/>
+    <symbol name="HPRIO" address="103C"/>
+    <symbol name="INIT" address="103D"/>
+    <symbol name="TEST1" address="103E"/>
+    <symbol name="CONFIG" address="103F"/>
+
+    <!-- 3-1619: Table 3. Interrupt Vector Assignments -->
+    <symbol name="VEC_RES_FFC0" address="FFC0"/>
+    <symbol name="VEC_RES_FFC2" address="FFC2"/>
+    <symbol name="VEC_RES_FFC4" address="FFC4"/>
+    <symbol name="VEC_RES_FFC6" address="FFC6"/>
+    <symbol name="VEC_RES_FFC8" address="FFC8"/>
+    <symbol name="VEC_RES_FFCA" address="FFCA"/>
+    <symbol name="VEC_RES_FFCC" address="FFCC"/>
+    <symbol name="VEC_RES_FFCE" address="FFCE"/>
+    <symbol name="VEC_RES_FFD0" address="FFD0"/>
+    <symbol name="VEC_RES_FFD2" address="FFD2"/>
+    <symbol name="VEC_RES_FFD4" address="FFD4"/>
+    <symbol name="VEC_SCI_SS" address="FFD6"/>
+    <symbol name="VEC_SPI_STC" address="FFD8"/>
+    <symbol name="VEC_PAIE" address="FFDA"/>
+    <symbol name="VEC_PAO" address="FFDC"/>
+    <symbol name="VEC_TO" address="FFDE"/>
+    <symbol name="VEC_TIC4OC5" address="FFE0"/>
+    <symbol name="VEC_TOC4" address="FFE2"/>
+    <symbol name="VEC_TOC3" address="FFE4"/>
+    <symbol name="VEC_TOC2" address="FFE6"/>
+    <symbol name="VEC_TOC1" address="FFE8"/>
+    <symbol name="VEC_TIC3" address="FFEA"/>
+    <symbol name="VEC_TIC2" address="FFEC"/>
+    <symbol name="VEC_TIC1" address="FFEE"/>
+    <symbol name="VEC_RTI" address="FFF0"/>
+    <symbol name="VEC_IRQ" address="FFF2"/>
+    <symbol name="VEC_XIRQ" address="FFF4"/>
+    <symbol name="VEC_SWI" address="FFF6"/>
+    <symbol name="VEC_IOT" address="FFF8"/>
+    <symbol name="VEC_COPF" address="FFFA"/>
+    <symbol name="VEC_COPCMF" address="FFFC"/>
+    <symbol name="VEC_RESET" address="FFFE"/>
+  </default_symbols>
+  <default_memory_blocks>
+    <!-- 3-1614: Table 2. Memory Map -->
+    <!-- Most of these can be remapped, but these are the defaults -->
+    <memory_block name="LOW_RAM" start_address="0x0000" length="0x100" initialized="false"/>
+    <!-- FIXME: is there a default? What is actually used? -->
+    <memory_block name="STACK" start_address="0x0100" length="0x40" initialized="false"/>
+    <memory_block name="IO" start_address="0x1000" length="0x40" initialized="false"/>
+    <memory_block name="EEPROM" start_address="0xF800" length="0x800" initialized="false"/>
+
+    <!-- "SPECIAL BOOT" mode only -->
+    <memory_block name="BOOT" start_address="0xBF40" length="0xC0" initialized="false"/>
+  </default_memory_blocks>
+</processor_spec>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<language_definitions>
+  <language processor="68HC811E2"
+            endian="big"
+            size="16"
+            variant="default"
+            version="1.0"
+            slafile="68HC811E2.sla"
+            processorspec="6805.pspec"
+            id="68HC811E2:BE:16:default">
+    <description>68HC811E2 Microcontroller Family</description>
+    <compiler name="default" spec="68HC811E2.cspec" id="default"/>
+  </language>
+</language_definitions>
