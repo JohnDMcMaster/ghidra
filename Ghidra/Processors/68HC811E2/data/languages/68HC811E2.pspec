@@ -110,9 +110,10 @@
     <memory_block name="RAM" start_address="0x0000" length="0x100" initialized="false"/>
     <!-- FIXME: is there a default? What is actually used? -->
     <memory_block name="REGS" start_address="0x1000" length="0x40" initialized="false"/>
-    <memory_block name="EEPROM" start_address="0xF800" length="0x800" initialized="false"/>
+    <!-- User has to manually place this? -->
+    <!-- <memory_block name="EEPROM" start_address="0xF800" length="0x800" initialized="false"/> -->
 
     <!-- "SPECIAL BOOT" mode only -->
-    <memory_block name="BOOT" start_address="0xBF40" length="0xC0" initialized="false"/>
+    <!-- <memory_block name="BOOT" start_address="0xBF40" length="0xC0" initialized="false"/> -->
   </default_memory_blocks>
 </processor_spec>
