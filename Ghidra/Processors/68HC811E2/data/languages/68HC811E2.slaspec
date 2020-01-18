@@ -1,15 +1,17 @@
-# sleigh specification file for Motorola 6805
+# sleigh specification file for Motorola 68HC811E2
 define endian=big;
 define alignment=1;
 
 define space RAM     type=ram_space      size=2  default;
+define space EEPROM     type=ram_space      size=2  default;
 define space register type=register_space size=1;
 
 define register offset=0x00  size=1 [ A X ];
 define register offset=0x20 size=2  [ PC SP];
 define register offset=0x30 size=1 [H I N Z C];	# status bits
 
-define RAM offset=0x3ffc size=2 [ SWI_VECTOR ];
+define EEPROM offset=0xfff6 size=2 [ SWI_VECTOR ];
+define RAM offset=0x0000 size=2 [ MY_TEST ];
 #TOKENS
 
 define token opbyte (8)

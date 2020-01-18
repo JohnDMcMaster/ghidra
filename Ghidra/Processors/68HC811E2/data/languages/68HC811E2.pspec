@@ -70,6 +70,7 @@
     <symbol name="CONFIG" address="103F"/>
 
     <!-- 3-1619: Table 3. Interrupt Vector Assignments -->
+    <!-- XXX: should these actually go in slaspec? -->
     <symbol name="VEC_RES_FFC0" address="FFC0"/>
     <symbol name="VEC_RES_FFC2" address="FFC2"/>
     <symbol name="VEC_RES_FFC4" address="FFC4"/>
@@ -106,10 +107,9 @@
   <default_memory_blocks>
     <!-- 3-1614: Table 2. Memory Map -->
     <!-- Most of these can be remapped, but these are the defaults -->
-    <memory_block name="LOW_RAM" start_address="0x0000" length="0x100" initialized="false"/>
+    <memory_block name="RAM" start_address="0x0000" length="0x100" initialized="false"/>
     <!-- FIXME: is there a default? What is actually used? -->
-    <memory_block name="STACK" start_address="0x0100" length="0x40" initialized="false"/>
-    <memory_block name="IO" start_address="0x1000" length="0x40" initialized="false"/>
+    <memory_block name="REGS" start_address="0x1000" length="0x40" initialized="false"/>
     <memory_block name="EEPROM" start_address="0xF800" length="0x800" initialized="false"/>
 
     <!-- "SPECIAL BOOT" mode only -->
